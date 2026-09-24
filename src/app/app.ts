@@ -6,7 +6,8 @@ import { RouterOutlet } from '@angular/router';
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
-})
+})  
 export class App {
-  protected readonly title = signal('my-first-repo-app');
+  protected readonly title = signal('Hello GitHub! This is my first Angular push.');
+
 }
