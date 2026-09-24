@@ -1,0 +1,23 @@
+<h1>Hoenn Gym Leaders</h1>
+
+<div class="leaders-container">
+  @for (leader of gymLeaders(); track leader.name) {
+    <div class="leader-card">
+      <h2>{{ leader.name }}</h2>
+      
+      <!-- Display Badge Image -->
+      <img [src]="leader.badgeUrl" [alt]="leader.badge" style="height: 50px;">
+      
+      <p><strong>Town:</strong> {{ leader.town }}</p>
+      <p><strong>Specialty:</strong> {{ leader.specialty }}</p>
+      <p><strong>Badge:</strong> {{ leader.badge }}</p>
+
+      <h3>Pokémon Team</h3>
+      <ul>
+        @for (pokemon of leader.pokemonTeam; track pokemon) {
+          <li>{{ pokemon }}</li>
+        }
+      </ul>
+    </div>
+  }
+</div>
